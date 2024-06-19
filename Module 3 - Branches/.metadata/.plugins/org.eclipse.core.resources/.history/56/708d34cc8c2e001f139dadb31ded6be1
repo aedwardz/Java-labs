@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		int total = scnr.nextInt();
+		
+		//initialize the number of coins used
+		int quarters = 0;
+		int dimes = 0;
+		int nickels = 0;
+		int pennies = 0;
+		
+		if (total < 1) {
+			System.out.println("No change");
+		}
+		else {
+			if (total >= 25) {
+			quarters = total / 25;
+			total -= quarters * 25;
+			}
+			if (total >= 10) {
+				dimes = total / 10;
+				total -= dimes * 10;
+			}
+			if (total >= 5) {
+				nickels = total / 5;
+				total -= nickels * 5;
+			}
+			if (total >= 1) {
+				pennies = total / 1;
+				total -= pennies;
+			}	
+		}
+		if (quarters > 0) {
+			if (quarters < 2) {
+				System.out.println(quarters + "Quarter");
+			}
+			else {
+				System.out.println(quarters + "Quarters");
+			}
+		}
+		if (dimes > 0) {
+			if (dimes == 1) {
+				System.out.println(dimes + "Dime");
+			}
+			else {
+				System.out.println(dimes + "Dimes");
+			}
+		}
+		if (nickels > 0) {
+			if (nickels == 1) {
+				System.out.println(nickels + "Nickel");
+			}
+			else {
+				System.out.println(nickels + "Nickels");
+			}
+		}
+		if (pennies > 0) {
+			if (pennies == 1) {
+				System.out.println(pennies + "Penny");
+			}
+			else {
+				System.out.println(pennies + "Pennies");
+			}
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+public class LabProgram {
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		
+		int highwayNum = scnr.nextInt();
+		
+		//boolean values to identify highway directions and types
+		boolean northSouth;
+		boolean eastWest;
+		boolean isPrimary;
+		boolean isAuxiliary;
+		
+		if (highwayNum < 1 || highwayNum > 999) {
+			System.out.println(highwayNum + " is not a valid interstate highway number.");
+		}
+		else if (highwayNum < 100) {
+			isPrimary = true;
+		}
+		else {
+			isAuxiliary = true;
+			int serving = highwayNum % 100;
+			System.out.println(serving);
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

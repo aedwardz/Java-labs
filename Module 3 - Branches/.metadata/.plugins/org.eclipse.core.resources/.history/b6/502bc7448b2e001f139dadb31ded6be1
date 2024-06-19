@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		int total = scnr.nextInt();
+		
+		//initialize the number of coins used
+		int quarters = 0;
+		int dimes = 0;
+		int nickels = 0;
+		int pennies = 0;
+		
+		if (total < 1) {
+			System.out.println("No change");
+		}
+		else {
+			if (total > 25) {
+			quarters = total / 25;
+			total -= quarters * 25;
+			System.out.println(quarters);
+			System.out.println(total);
+			}
+			
+			
+		}
+		
+	}
+
+}
